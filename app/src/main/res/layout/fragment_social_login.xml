@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="65dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_app_toolbar"
+        android:background="@drawable/bg"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_user_img_Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center|center"
+                    android:layout_marginTop="@dimen/value_20">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView"
+                        android:src="@drawable/logo"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rl_user_img_Layout"
+                    android:layout_marginTop="@dimen/value_15"
+                    android:paddingLeft="@dimen/value_16"
+                    android:paddingRight="@dimen/value_16"
+                    android:id="@+id/rl_login">
+
+                    <!-- Email -->
+                    <com.rock.reward.utils.CustomTextView
+                        android:id="@+id/tv_email"
+                        android:drawablePadding="@dimen/value_10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/value_5"
+                        android:paddingLeft="@dimen/value_10"
+                        android:paddingRight="@dimen/value_10"
+                        android:text="Full Name"
+                        android:drawableLeft="@drawable/ic_mail"
+                        android:textSize="@dimen/size_normal_text"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                    <com.rock.reward.utils.CustomEditText
+                        android:id="@+id/full_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_email"
+                        android:paddingBottom="@dimen/value_10"
+                        android:paddingRight="@dimen/value_10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/size_normal_text"
+                        android:theme="@style/Theme.App.Base"
+                        android:textColor="@color/white"/>
+
+                    <!-- password -->
+                    <com.rock.reward.utils.CustomTextView
+                        android:id="@+id/tv_password"
+                        android:layout_width="fill_parent"
+                        android:drawableLeft="@drawable/ic_mail"
+                        android:drawablePadding="@dimen/value_10"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/full_name"
+                        android:paddingLeft="@dimen/value_10"
+                        android:paddingRight="@dimen/value_10"
+                        android:text="@string/email"
+                        android:textSize="@dimen/size_title_text"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                    <com.rock.reward.utils.CustomEditText
+                        android:id="@+id/email"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_password"
+                        android:paddingBottom="@dimen/value_10"
+                        android:paddingRight="@dimen/value_10"
+                        android:singleLine="true"
+                        android:theme="@style/Theme.App.Base"
+                        android:textSize="@dimen/size_title_text"
+                        android:textColor="@color/white" />
+
+
+                    <com.rock.reward.utils.CustomButton
+                        android:id="@+id/signup_button"
+                        style="@style/button_login"
+                        android:background="@drawable/round_login_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_below="@+id/email"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/value_15"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/value_50"
+                        android:paddingRight="@dimen/value_50"
+                        android:text="@string/sign_up"
+                        android:textSize="@dimen/size_title_text" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

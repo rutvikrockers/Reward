@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_alignParentRight="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/project_thumbnail"
+                    android:adjustViewBounds="true"
+                    android:layout_marginBottom="@dimen/project_picture_margin_bottom_detail" />
+
+                <fragment
+                    android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+                    android:id="@+id/youtube_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/project_status"
+                    android:layout_alignBottom="@+id/project_thumbnail"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="@dimen/value_10"
+                    android:layout_marginLeft="@dimen/value_10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small_text_size" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/shadow_border">
+
+                <TextView
+                    style="@style/font_project_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toughest UV and CPL filter"
+                    android:id="@+id/tv_project_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$2,793 USD raised of"
+                    android:id="@+id/amount_raised"
+                    android:layout_below="@+id/tv_project_title"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/font_regular_normal_grey"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$3,000 USD"
+                    android:id="@+id/amount"
+                    android:layout_below="@+id/tv_project_title"
+                    android:layout_toRightOf="@+id/amount_raised"
+                    android:layout_toEndOf="@+id/amount_raised"
+                    android:layout_marginLeft="5dp"
+                    style="@style/font_regular_normal_grey"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:id="@+id/progress_amount_raised"
+                    android:layout_below="@+id/amount_raised"
+                    android:progressTint="@color/project_detail_theme"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/custom_progress"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="93% Funded"
+                    android:id="@+id/percentage_funded"
+                    android:layout_below="@+id/progress_amount_raised"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/font_regular_normal_grey" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17 Days Left"
+                    android:id="@+id/days_left"
+                    android:layout_below="@+id/progress_amount_raised"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    style="@style/font_regular_normal_grey" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:id="@+id/category"
+                    android:drawableLeft="@drawable/ic_cat_gray"
+                    android:gravity="right"
+                    android:layout_alignTop="@+id/amount"
+                    android:layout_alignRight="@+id/progress_amount_raised"
+                    android:layout_alignEnd="@+id/progress_amount_raised" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_top_updates"
+                android:background="@color/project_detail_background"
+                android:paddingLeft="@dimen/value_10"
+                android:paddingTop="@dimen/value_20"
+                android:paddingRight="@dimen/value_10"
+                android:paddingBottom="@dimen/value_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UPDATES"
+                    android:id="@+id/textView25"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/project_title_block_heading"
+                    android:textColor="#000"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_black_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/imageView8" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_border"
+                android:layout_marginLeft="@dimen/value_10"
+                android:layout_marginRight="@dimen/value_10"
+                android:id="@+id/rl_update_list">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_top_comments"
+                android:background="@color/project_detail_background"
+                android:paddingTop="@dimen/value_20"
+                android:paddingBottom="@dimen/value_20"
+                android:paddingLeft="@dimen/value_10"
+                android:paddingRight="@dimen/value_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COMMENTS"
+                    android:id="@+id/tv_comment"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/project_title_block_heading"
+                    android:textColor="#000"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_black_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/imageView7" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_border"
+                android:layout_marginLeft="@dimen/value_10"
+                android:layout_marginRight="@dimen/value_10">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_top_contributions"
+                android:background="@color/project_detail_background"
+                android:paddingLeft="@dimen/value_10"
+                android:paddingTop="@dimen/value_20"
+                android:paddingRight="@dimen/value_10"
+                android:paddingBottom="@dimen/value_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FUNDS"
+                    android:id="@+id/textView32"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/project_title_block_heading"
+                    android:textColor="#000"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_black_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/imageView6" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_border"
+                android:layout_marginLeft="@dimen/value_10"
+                android:layout_marginRight="@dimen/value_10"
+                android:id="@+id/rl_funder_list">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_top_perks"
+                android:background="@color/project_detail_background"
+                android:paddingLeft="@dimen/value_10"
+                android:paddingTop="@dimen/value_20"
+                android:paddingRight="@dimen/value_10"
+                android:paddingBottom="@dimen/value_20">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="PERKS"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/project_title_block_heading"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_black_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/imageView5" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_border"
+                android:layout_marginLeft="@dimen/value_10"
+                android:layout_marginRight="@dimen/value_10">
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_top_followers"
+                android:background="@color/project_detail_background"
+                android:paddingLeft="@dimen/value_10"
+                android:paddingRight="@dimen/value_10"
+                android:paddingTop="@dimen/value_20"
+                android:paddingBottom="@dimen/value_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FOLLOWERS"
+                    android:id="@+id/followers"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/project_title_block_heading"
+                    android:textColor="#000"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_black_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/imageView4" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_border"
+                android:layout_marginLeft="@dimen/value_10"
+                android:layout_marginRight="@dimen/value_10">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

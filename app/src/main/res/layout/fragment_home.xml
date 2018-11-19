@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_no_data_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/error_no_data_found"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/login_button_background"
+        android:textSize="@dimen/value_20"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeProjects"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/myScrollingContents"-->
+            <!--android:layout_marginBottom="60dp">-->
+
+
+        <!--<android.support.v4.widget.NestedScrollView-->
+            <!--android:id="@+id/myScrollingContent"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true">-->
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/listView"
+                    android:name="com.rockers.reward.fragment.ItemFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:scrollbars="none"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+
+        <!--</ScrollView>-->
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

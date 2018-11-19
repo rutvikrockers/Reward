@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shadow_border">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/value_10"
+        android:weightSum="100">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/value_70"
+            android:id="@+id/user_image"
+            android:layout_marginRight="5dp"
+            android:layout_weight="25"
+            android:layout_gravity="top" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="65">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A big thank you, your name on our website as a supporter and a special 10% discount code for all future online purchases of Damson Chocolate. "
+                android:id="@+id/user_name_s"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/user_image"
+                android:layout_toEndOf="@+id/user_image"
+                android:layout_marginBottom="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="David Horan"
+                    android:id="@+id/team_member_text"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 weeks ago"
+                    android:id="@+id/comment_time"
+                    android:layout_alignTop="@+id/team_member_text"
+                    android:layout_toRightOf="@+id/team_member_text"
+                    android:layout_toEndOf="@+id/team_member_text" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_more_vert_black_24dp"
+            android:id="@+id/action_menu"
+            android:visibility="gone"
+            android:layout_weight="10" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/comment_status"
+            android:layout_marginBottom="@dimen/value_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text_size" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

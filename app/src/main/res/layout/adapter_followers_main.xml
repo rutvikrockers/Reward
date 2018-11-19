@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/shadow_border">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/value_10"
+        android:layout_weight="0.1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/value_70"
+                android:layout_height="@dimen/value_70"
+                android:src="@drawable/com_facebook_profile_picture_blank_square"
+                android:id="@+id/follower_image"
+                android:layout_alignParentTop="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/value_10"
+        android:layout_weight="0.9"
+        android:orientation="vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="David Horan"
+                android:id="@+id/follower_name"
+                android:layout_below="@+id/follower_image"
+                android:layout_centerHorizontal="true"
+            android:padding="@dimen/value_5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/date"
+            android:padding="@dimen/value_5" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

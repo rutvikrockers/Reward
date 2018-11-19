@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tb_app_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="@dimen/negative_value_16"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_left_drawer_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/value_10"
+            android:src="@drawable/indent" />
+
+        <ImageView
+            android:id="@+id/iv_right_drawer_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/value_10"
+            android:src="@drawable/refresh"
+            android:visibility="gone" />
+
+
+        <com.rock.reward.utils.CustomTextView
+            android:id="@+id/tv_header_title"
+            style="@style/font_style_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/value_40"
+            android:paddingRight="@dimen/value_40"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/iv_header_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_right_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/value_10"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.rock.reward.utils.CustomTextView
+                android:id="@+id/tv_right_text"
+                style="@style/font_style_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iv_left_drawer_img"
+                android:layout_toRightOf="@+id/iv_left_drawer_img"
+                android:text="1/20"
+                android:visibility="gone" />
+
+            <com.rock.reward.utils.CustomTextView
+                android:id="@+id/tv_cancel"
+                style="@style/font_regular_normal_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/value_20"
+                android:text="Cancel" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

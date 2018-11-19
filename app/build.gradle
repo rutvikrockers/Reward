@@ -1,0 +1,87 @@
+    buildscript {
+        repositories {
+            maven { url 'https://maven.fabric.io/public' }
+            google()  // add google() before jcenter()
+            jcenter()
+        }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.25.4'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "com.rock.reward"
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 5
+        versionName "1.2.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "Reward"
+    productFlavors {
+        reward {
+            applicationId = "com.rock.reward"
+            resValue "string", "app_name", "Reward"
+            dimension "Reward"
+        }
+
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+
+    }
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+}
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    compile files('libs/glide-3.7.0.jar')
+    compile('com.twitter.sdk.android:twitter:1.14.1@aar') {
+        transitive = true;
+    }
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.1@aar') {
+        transitive = true;
+    }
+    compile fileTree(dir: 'libs', include: ['linkedin-sdk'])
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
+    //    compile project(':linkedin-sdk')
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.roughike:bottom-bar:1.4.0.1'
+    compile 'com.android.support:support-v4:26.2.1'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:design:26.1.0'
+    testCompile 'junit:junit:4.12'
+}
+
+
+

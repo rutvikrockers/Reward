@@ -1,0 +1,242 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rock.reward.fragment.FilterCampaign">
+
+   <android.support.v4.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/input_layout_by_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <EditText
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/by_name"
+             android:layout_marginTop="@dimen/value_10"
+             android:hint="By Name"/>
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/input_layout_by_city"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <EditText
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/by_city"
+             android:layout_gravity="center_horizontal"
+             android:layout_marginTop="@dimen/value_10"
+             android:hint="By City"/>
+
+      </android.support.design.widget.TextInputLayout>
+
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/select_category"
+          android:layout_marginTop="@dimen/value_10" />
+
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/select_country"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="@dimen/value_10" />
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/value_10">
+
+         <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Goal Size"
+                android:id="@+id/textView5"
+                android:padding="@dimen/value_10" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/rg_goal_size">
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="All"
+                   android:id="@+id/rb_all_goal_size"
+                   android:checked="true"
+                   android:padding="@dimen/value_10" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="0% - 25%"
+                   android:id="@+id/rb_first_goal_size"
+                   android:checked="false"
+                   android:padding="@dimen/value_10" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="25% - 50%"
+                   android:id="@+id/rb_second_goal_size"
+                   android:checked="false"
+                   android:padding="@dimen/value_10" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="50% - 75%"
+                   android:id="@+id/rb_third_goal_size"
+                   android:checked="false"
+                   android:padding="@dimen/value_10" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="75% - 100+%"
+                   android:id="@+id/rb_fourth_goal_size"
+                   android:checked="false"
+                   android:padding="@dimen/value_10" />
+            </RadioGroup>
+         </LinearLayout>
+
+         <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Goal Type"
+                android:id="@+id/textView6"
+                android:padding="@dimen/value_10" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/rg_goal_type">
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="All"
+                   android:id="@+id/rb_all_type"
+                   android:checked="true"
+                   android:padding="@dimen/value_10" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Flexible"
+                   android:id="@+id/rb_flexibel_type"
+                   android:checked="false"
+                   android:padding="@dimen/value_10" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Fixed"
+                   android:id="@+id/rb_fixed_type"
+                   android:checked="false"
+                   android:padding="@dimen/value_10" />
+
+
+            </RadioGroup>
+         </LinearLayout>
+
+         <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:id="@+id/textView7"
+                android:padding="@dimen/value_10" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/rg_status">
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="All"
+                   android:id="@+id/rb_all_status"
+                   android:checked="true"
+                   android:padding="@dimen/value_10" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Open"
+                   android:id="@+id/rb_open_status"
+                   android:checked="false"
+                   android:padding="@dimen/value_10" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Success"
+                   android:id="@+id/rb_success_status"
+                   android:checked="false"
+                   android:padding="@dimen/value_10" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Ended"
+                   android:id="@+id/rb_ended_status"
+                   android:checked="false"
+                   android:padding="@dimen/value_10" />
+
+            </RadioGroup>
+         </LinearLayout>
+
+      </LinearLayout>
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Search"
+          android:id="@+id/search_project"
+          android:background="@color/colorPrimary"
+          android:textColor="@color/white"
+          android:layout_marginTop="@dimen/value_10" />
+
+   </LinearLayout>
+   </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

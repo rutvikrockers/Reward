@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/approve"
+        android:title="Approve"/>
+
+    <item
+        android:id="@+id/delete"
+        android:title="Delete"/>
+
+    <item
+        android:id="@+id/spam"
+        android:title="Report Spam"/>
+
+    <item
+        android:id="@+id/decline"
+        android:title="Decline"/>
+
+</menu>

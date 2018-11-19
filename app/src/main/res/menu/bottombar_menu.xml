@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottomBarItemOne"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/bottomBarItemTwo"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/bottomBarItemThree"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="Favourites" />
+
+    <item
+        android:id="@+id/bottomBarItemFour"
+        android:icon="@drawable/ic_notification_black_24dp"
+        android:title="Activities" />
+
+    <item
+        android:id="@+id/bottomBarItemFive"
+        android:icon="@drawable/ic_account_black_24dp"
+        android:title="Profile" />
+</menu>

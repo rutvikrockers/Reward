@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ce243f</color>
+    <color name="colorPrimaryDark">#FFB30B19</color>
+    <color name="colorAccent">#FFB30B19</color>
+    <color name="white">#FFF</color>
+    <color name="login_button_background">#eb5543</color>
+    <color name="transparent">#00000000</color>
+    <color name="project_title">#000000</color>
+    <color name="project_detail_theme">#ce243f</color>
+    <color name="project_detail_icon_color">#333</color>
+    <color name="project_detail_background">#f3f3f3</color>
+    <color name="psts_background_tab_pressed">#1affffff</color>
+    <color name="project_detail_normal_text">#666666</color>
+    <color name="project_detail_bold_text">#333333</color>
+    <color name="light_grey">#dcdada</color>
+    <color name="gray9">#cecece</color>
+</resources>

@@ -1,0 +1,137 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rock.reward.fragment.userProfile.UserOverviewFragment">
+
+   <android.support.v4.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:padding="@dimen/value_10">
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/layout_about_me">
+
+               <TextView
+                   android:text="ABOUT ME"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textView2"
+                   android:textStyle="normal|bold" />
+
+               <android.support.v7.widget.CardView
+                   android:id="@+id/card_view"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="8dp"
+                   android:padding= "@dimen/value_10">
+
+                   <TextView
+                       android:text="Hello, How are you, This is lorm ipsum"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:padding="@dimen/value_10"
+                       android:id="@+id/about_me" />
+               </android.support.v7.widget.CardView>
+           </LinearLayout>
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/layout_skills">
+
+               <TextView
+                   android:text="SKILLS"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/skills_label"
+                   android:textStyle="normal|bold" />
+
+               <android.support.v7.widget.CardView
+                   android:id="@+id/card_view_label"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="8dp"
+                   android:padding="@dimen/value_10">
+
+                   <TextView
+                       android:text="Hello, How are you, This is lorm ipsum"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:padding="@dimen/value_10"
+                       android:id="@+id/skills" />
+               </android.support.v7.widget.CardView>
+           </LinearLayout>
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/layout_occupation">
+
+               <TextView
+                   android:text="OCCUPATION"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/occupation_label"
+                   android:textStyle="normal|bold" />
+
+               <android.support.v7.widget.CardView
+                   android:id="@+id/card_view_occupation"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="8dp"
+                   android:padding="@dimen/value_10">
+
+                   <TextView
+                       android:text="Hello, How are you, This is lorm ipsum"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:padding="@dimen/value_10"
+                       android:id="@+id/occupation" />
+               </android.support.v7.widget.CardView>
+           </LinearLayout>
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/layout_interest">
+
+               <TextView
+                   android:text="INTEREST"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/interest_label"
+                   android:textStyle="normal|bold" />
+
+               <android.support.v7.widget.CardView
+                   android:id="@+id/card_view_interest"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="8dp"
+                   android:padding="@dimen/value_10">
+
+                   <TextView
+                       android:text="Hello, How are you, This is lorm ipsum"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:padding="@dimen/value_10"
+                       android:id="@+id/interest" />
+               </android.support.v7.widget.CardView>
+           </LinearLayout>
+
+       </LinearLayout>
+
+   </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

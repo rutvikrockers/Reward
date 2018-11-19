@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rock.reward">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name="com.rock.reward.activity.HomeActivity" />
+
+        <!--<activity-->
+            <!--android:name="com.facebook.FacebookActivity"-->
+            <!--android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="40fbc15d5c50a40159921dd7a3facab013eaf7bc" />
+
+        <activity android:name="com.rock.reward.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.rock.reward.activity.ProjectDetailActivity" />
+        <activity
+            android:name="com.rock.reward.activity.CommentActivity"
+            android:label="@string/title_activity_comment"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.UpdateActivity"
+            android:label="@string/title_activity_update"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.ProfileActivity"
+            android:label=""
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.FunderActivity"
+            android:label="@string/title_activity_funder"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.FollowerActivity"
+            android:label="@string/title_activity_follower"
+            android:theme="@style/AppTheme" />
+
+        <activity android:name=".activity.ForgotPasswordActivity">
+        </activity>
+        <activity
+            android:name="com.rock.reward.activity.TeamMemberActivity"
+            android:label="@string/title_activity_team_member"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.DonationDetailActivity"
+            android:label="@string/title_activity_donation_detail"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.rock.reward.activity.ReadStory" />
+        <activity
+            android:name="com.rock.reward.TabActivity"
+            android:label="@string/title_activity_tab"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.TabActivityAction"
+            android:label=""
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.ProjectDashboardActivity"
+            android:label="@string/title_activity_project_dashboard"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.projectDashboard.DashboardCommentActivity"
+            android:label="@string/title_activity_project_dashboard"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.projectDashboard.DashboardFunderActivity"
+            android:label="@string/title_activity_project_dashboard"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.projectDashboard.DashboardUpdateActivity"
+            android:label="@string/title_activity_project_dashboard"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.projectDashboard.DashboardFollowerActivity"
+            android:label="@string/title_activity_project_dashboard"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.rock.reward.activity.TempActivity" />
+        <activity
+            android:name="com.rock.reward.activity.projectDashboard.DashboardPerkActivity"
+            android:label="@string/title_activity_dashboard_perk"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rock.reward.activity.EditUserProfileActivity"
+            android:label="@string/title_activity_edit_user_profile"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
